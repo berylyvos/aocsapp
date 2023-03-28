@@ -1,0 +1,73 @@
+uint64_t sum(uint64_t n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return n + sum(n - 1);
+    }
+}
+
+int main()
+{
+    uint64_t a = sum(3);
+    return 0;
+}
+
+400400    mov    $0x3,%edi
+400440    callq  0x00400000
+400000    push   %rbp
+400040    mov    %rsp,%rbp
+400080    sub    $0x10,%rsp
+4000c0    mov    %rdi,-0x8(%rbp)
+400100    cmpq   $0x0,-0x8(%rbp)
+400140    jne    0x400200
+400200    mov    -0x8(%rbp),%rax
+400240    sub    $0x1,%rax
+400280    mov    %rax,%rdi
+4002c0    callq  0x00400000
+400000    push   %rbp
+400040    mov    %rsp,%rbp
+400080    sub    $0x10,%rsp
+4000c0    mov    %rdi,-0x8(%rbp)
+400100    cmpq   $0x0,-0x8(%rbp)
+400140    jne    0x400200
+400200    mov    -0x8(%rbp),%rax
+400240    sub    $0x1,%rax
+400280    mov    %rax,%rdi
+4002c0    callq  0x00400000
+400000    push   %rbp
+400040    mov    %rsp,%rbp
+400080    sub    $0x10,%rsp
+4000c0    mov    %rdi,-0x8(%rbp)
+400100    cmpq   $0x0,-0x8(%rbp)
+400140    jne    0x400200
+400200    mov    -0x8(%rbp),%rax
+400240    sub    $0x1,%rax
+400280    mov    %rax,%rdi
+4002c0    callq  0x00400000
+400000    push   %rbp
+400040    mov    %rsp,%rbp
+400080    sub    $0x10,%rsp
+4000c0    mov    %rdi,-0x8(%rbp)
+400100    cmpq   $0x0,-0x8(%rbp)
+400140    jne    0x400200
+400180    mov    $0x0,%eax
+4001c0    jmp    0x400380
+400380    leaveq
+4003c0    retq
+400300    mov    -0x8(%rbp),%rdx
+400340    add    %rdx,%rax
+400380    leaveq
+4003c0    retq
+400300    mov    -0x8(%rbp),%rdx
+400340    add    %rdx,%rax
+400380    leaveq
+4003c0    retq
+400300    mov    -0x8(%rbp),%rdx
+400340    add    %rdx,%rax
+400380    leaveq
+4003c0    retq
+400480    mov    %rax,-0x8(%rbp)
